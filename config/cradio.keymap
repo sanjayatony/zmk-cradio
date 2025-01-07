@@ -39,10 +39,10 @@
 
         right_layer {
             bindings = <
-&kp Q       &kp N1        &kp N2        &kp N3  &kp N4    &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &kp BACKSPACE
-&sk LCTRL   &kp LALT      &kp LGUI      &none   &none     &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp DELETE
-&sk LSHIFT  &sk LC(LGUI)  &sk LA(LGUI)  &none   &none     &kp PIPE        &kp UNDER          &kp PLUS         &kp BACKSLASH    &none
-                                        &trans  &trans    &trans          &trans
+&kp Q             &kp N1        &kp N2        &kp N3  &kp N4    &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &kp BACKSPACE
+&sk LCTRL         &kp LALT      &kp LGUI      &none   &none     &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp DELETE
+&sk LS(LEFT_GUI)  &sk LC(LGUI)  &sk LA(LGUI)  &none   &none     &kp PIPE        &kp UNDER          &kp PLUS         &kp BACKSLASH    &none
+                                              &trans  &trans    &trans          &trans
             >;
         };
 
