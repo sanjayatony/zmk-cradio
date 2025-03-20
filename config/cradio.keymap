@@ -19,7 +19,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        tmux {
+            bindings = <&kp LC(A)>;
+            key-positions = <10 11>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
