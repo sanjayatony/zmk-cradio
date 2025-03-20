@@ -19,14 +19,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        C-a {
-            bindings = <&kp LC(A)>;
-            key-positions = <10 11>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
