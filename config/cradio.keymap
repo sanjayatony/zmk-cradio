@@ -10,9 +10,21 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <200>;
+            hold-trigger-on-release;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        C-a {
+            bindings = <&kp LC(A)>;
+            key-positions = <10 11>;
         };
     };
 
@@ -22,7 +34,7 @@
         default_layer {
             bindings = <
 &kp TAB       &kp W  &kp E  &kp R     &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P
-&kp A         &kp S  &kp D  &kp F     &kp G        &kp H        &kp J           &kp K      &kp L    &kp SEMICOLON
+&kp A         &kp S  &kp D  &kp F     &kp G        &kp H        &kp J           &kp K      &lt 4 L  &kp SEMICOLON
 &hm LSHIFT Z  &kp X  &kp C  &kp V     &kp B        &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH
                             &kp LGUI  &lt 1 ESC    &lt 2 SPACE  &hm LALT GRAVE
             >;
@@ -48,10 +60,19 @@
 
         tri_layer {
             bindings = <
-&sys_reset      &trans  &trans  &trans      &bt BT_SEL 0    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &sys_reset
-&bootloader     &trans  &trans  &trans      &bt BT_SEL 1    &trans      &trans             &trans           &trans  &bootloader
-&studio_unlock  &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans      &trans             &trans           &trans  &studio_unlock
-                                &trans      &trans          &trans      &trans
+&sys_reset      &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+&bootloader     &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+&studio_unlock  &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &studio_unlock
+                                &trans      &trans          &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans      &trans        &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans        &trans        &trans  &trans
+                        &trans  &trans    &trans      &trans
             >;
         };
     };
