@@ -23,7 +23,7 @@
         compatible = "zmk,combos";
 
         tmux {
-            bindings = <&kp LC(A)>;
+            bindings = <&kp LC(B)>;
             key-positions = <10 11>;
         };
     };
