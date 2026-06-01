@@ -24,7 +24,22 @@
 
         tmux {
             bindings = <&kp LC(B)>;
-            key-positions = <10 11>;
+            key-positions = <11 10>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <15 16>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <18 19>;
         };
     };
 
