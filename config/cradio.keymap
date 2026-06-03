@@ -19,34 +19,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        tmux {
-            bindings = <&kp LC(B)>;
-            key-positions = <11 10>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <16 17>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <18 19>;
-        };
-
-        tab {
-            bindings = <&none>;
-            key-positions = <0 1>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
