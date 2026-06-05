@@ -19,17 +19,39 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <15 16>;
+        };
+
+        bspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <18 19>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         mac_layer {
             bindings = <
-&kp Q             &kp W  &kp E  &kp R     &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P
-&kp LEFT_CONTROL  &kp S  &kp D  &kp F     &kp G        &kp H        &kp J           &kp K      &lt 4 L  &kp SEMICOLON
-&hm LSHIFT Z      &kp X  &kp C  &kp V     &kp B        &kp N        &kp M           &kp COMMA  &kp DOT  &hm LCTRL SLASH
-                                &kp LGUI  &lt 1 ESC    &lt 2 SPACE  &hm LALT GRAVE
+&kp Q         &kp W  &kp E  &kp R     &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P
+&kp A         &kp S  &kp D  &kp F     &kp G        &kp H        &kp J           &kp K      &lt 4 L  &kp SEMICOLON
+&hm LSHIFT Z  &kp X  &kp C  &kp V     &kp B        &kp N        &kp M           &kp COMMA  &kp DOT  &hm LCTRL SLASH
+                            &kp LGUI  &lt 1 ESC    &lt 2 SPACE  &hm LALT GRAVE
             >;
         };
 
@@ -44,10 +66,10 @@
 
         upper_layer {
             bindings = <
-&kp Q             &kp LG(N8)     &kp LG(N7)    &kp LG(NUMBER_6)  &kp LG(N5)    &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp BACKSPACE
-&sk LCTRL         &sk LS(LCTRL)  &none         &none             &none         &kp LEFT_ARROW    &kp DOWN_ARROW    &kp UP_ARROW      &kp RIGHT_ARROW   &kp DELETE
+&kp LG(N9)        &kp LG(N8)     &kp LG(N7)    &kp LG(NUMBER_6)  &kp LG(N5)    &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp BACKSPACE
+&sk LCTRL         &sk LS(LCTRL)  &none         &sk LEFT_SHIFT    &none         &kp LEFT_ARROW    &kp DOWN_ARROW    &kp UP_ARROW      &kp RIGHT_ARROW   &kp DELETE
 &sk LS(LEFT_GUI)  &sk LC(LGUI)   &sk LA(LGUI)  &none             &none         &kp PIPE          &kp BACKSLASH     &kp HOME          &kp END           &kp LG(RIGHT)
-                                               &sk LCTRL         &mo 3         &trans            &trans
+                                               &kp LCTRL         &mo 3         &trans            &trans
             >;
         };
 
